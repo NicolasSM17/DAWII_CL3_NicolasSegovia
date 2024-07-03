@@ -1,1 +1,12 @@
-<p>todo-list works!</p>
+<h1 class="fw-bold text-center">Id's del 25 al 90 y completed: true</h1>
+@if (todos.length > 0) {
+    <div class="container">
+        <ul class="list-group">
+            @for (todo of todos; track todo.userId) {
+                <li class="list-group-item">
+                    {{ todo.title }}
+                </li>
+            }
+        </ul>
+    </div>
+}

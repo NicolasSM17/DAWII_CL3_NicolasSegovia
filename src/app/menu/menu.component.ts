@@ -15,6 +15,10 @@ export class MenuComponent {
   constructor( private router: Router, private route: ActivatedRoute){}
   
   irLocation(): void {
-    this.router.navigate(["location"], {relativeTo: this.route})
+    this.router.navigate(["location"], {relativeTo: this.route});
+  }
+
+  irTodo(): void {
+    this.router.navigate(["todo"], {relativeTo: this.route});
   }
 }
