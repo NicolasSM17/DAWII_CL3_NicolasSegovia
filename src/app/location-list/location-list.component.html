@@ -1,1 +1,19 @@
-<p>location-list works!</p>
+<h1 class="fw-bold text-center">Planetas</h1>
+@if (locations.length > 0;) {
+    <div class="container">
+        <ul class="list-group">
+            @for (location of locations; track location.id) {
+                <li class="list-group-item">
+                    {{ location.name }}
+                </li>
+            }
+        </ul>
+    </div>
+}
+@else {
+    <ng-template>
+        <p>No planets found.</p>
+    </ng-template>
+}
+
+
